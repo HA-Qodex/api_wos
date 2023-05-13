@@ -1,3 +1,4 @@
+const multer = require('multer')
 let {user} = require("../models/users.model");
 const {v4: uuidv4} = require("uuid");
 
@@ -46,4 +47,9 @@ const deleteUser = (req, res)=>{
     })
 }
 
-module.exports = {getUser, setUser, updateUser, deleteUser}
+const userPhoto = (req, res)=>{
+    res.status(201).send('uploaded successfully')
+
+}
+
+module.exports = {getUser, setUser, updateUser, deleteUser, userPhoto}

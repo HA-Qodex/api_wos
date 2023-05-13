@@ -5,6 +5,7 @@ const cors = require('cors');
 const user = require('./routes/users.route')
 
 app.use(cors());
+app.use(express.static('public/'))
 app.use(bodyParser.urlencoded({'extended':true}))
 app.use('/user', user);
 
